@@ -67,10 +67,10 @@ public class Cliente {
 		this.sueldoAnual = sueldoAnual;
 	}
 
-	/*public void solicitarCreditoPersonalEnBanco(Banco banco) {
+	public void solicitarCreditoPersonalEnBanco(Banco banco) {
 		// desarrollar logica
 
-	}*/
+	}
 
 }
 
