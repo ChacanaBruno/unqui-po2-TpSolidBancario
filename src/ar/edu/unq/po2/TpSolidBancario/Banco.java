@@ -12,6 +12,28 @@ public class Banco {
 	private List<Cliente> clientesDelBanco = new ArrayList<>();
 	private List<Verificable> verificacionesPendientes = new ArrayList<>();
 
+	public Banco(List<Cliente> clientesDelBanco, List<Verificable> verificacionesPendientes) {
+		super();
+		this.clientesDelBanco = clientesDelBanco;
+		this.verificacionesPendientes = verificacionesPendientes;
+	}
+
+	public List<Cliente> getClientesDelBanco() {
+		return clientesDelBanco;
+	}
+
+	public void setClientesDelBanco(List<Cliente> clientesDelBanco) {
+		this.clientesDelBanco = clientesDelBanco;
+	}
+
+	public List<Verificable> getVerificacionesPendientes() {
+		return verificacionesPendientes;
+	}
+
+	public void setVerificacionesPendientes(List<Verificable> verificacionesPendientes) {
+		this.verificacionesPendientes = verificacionesPendientes;
+	}
+
 	public void agregarCliente(Cliente cliente) {
 		clientesDelBanco.add(cliente);
 	}
