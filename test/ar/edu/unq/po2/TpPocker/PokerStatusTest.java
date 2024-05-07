@@ -1,29 +1,36 @@
 package ar.edu.unq.po2.TpPocker;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PokerStatusTest {
 
-	//Declaracion de variables
-	private PokerStatus pokerAppTest;
-	
-	// creacion del tipo de objeto.
-	@BeforeEach
+    private PokerStatus pokerAppTest;
+    
+    @BeforeEach
     public void setUp() {
-		pokerAppTest = new PokerStatus();
-	}
-	
-	
-	@Test
-	void verificarSiHayPokerTest() {
-		//figura de la carta (P = picas, C = corazones, D = diamantes, T = tréboles
-		assertFalse(pokerAppTest.verificar("1D", "2D","3D","4D","5Q"), "no hay poker");
-		assertTrue(pokerAppTest.verificar("1D", "1P","4D","1Q","1C"), "no hay poker");
-		assertFalse(pokerAppTest.verificar("10D", "QD","4D","1Q","1C"), "no hay poker");
-	}
+        pokerAppTest = new PokerStatus();
+    }
+    
+    @Test
+    void verificarSiNoHayNadaTest() {
+    	 assertEquals("Nada", pokerAppTest.verificar("3H", "1Q", "2J", "7J", "3J"), "No esta retornando Color");
+    }
+    @Test
+    void verificarSiHayPokerTest() {
+ 
+        // Verificar que hay póquer y retorna "Poquer"
+        assertEquals("Poquer", pokerAppTest.verificar("1D", "1P", "1D", "1Q", "2C"), "No esta retornando póquer");
+
+    }
+    @Test
+    void verificarSiHayTrioTest() {
+    	 assertEquals("Trio", pokerAppTest.verificar("3J", "1J", "3D", "7J", "3C"), "No esta retornando Trio");
+    }
+    
+    @Test
+    void verificarSiHayColorTest() {
+    	 assertEquals("Color", pokerAppTest.verificar("3J", "1J", "2J", "7J", "3J"), "No esta retornando Color");
+    }
 }
