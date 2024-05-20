@@ -96,4 +96,25 @@ class PokerStatusTest {
 		assertEquals("Q", cartaDePrueba.getPalo());
 
 	}
+	@Test
+	void cuandoSeJuegaPoquerYTrioGanaPoquer() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
