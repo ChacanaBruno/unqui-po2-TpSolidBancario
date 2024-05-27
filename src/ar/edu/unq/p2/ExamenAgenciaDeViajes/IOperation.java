@@ -1,5 +1,7 @@
 package ar.edu.unq.p2.ExamenAgenciaDeViajes;
 
-public interface IOperation {
+import java.time.LocalDate;
 
+public interface IOperation {
+	public double taxes(String aeroportName, LocalDate date);
 }
