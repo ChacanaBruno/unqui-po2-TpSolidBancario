@@ -21,7 +21,8 @@ class ExcursionTest {
 	 }
 	@Test
 	void testUnaExcursionIdentificaSuPrecioFinal() {
-		assertEquals(excursionTest.calcularPrecioFinal(), 110);
+		double montoAEvaluar = excursionTest.calcularPrecioFinal();
+		assertEquals(montoAEvaluar, 110);
 	}
 
 }
