@@ -5,6 +5,10 @@ public class Excursion extends Producto{
 	
 	
 	
+	public Excursion() {
+		super();
+	}
+
 	@Override
 	public double calcularPrecioFinal() {
 		// TODO Auto-generated method stub

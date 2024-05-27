@@ -30,8 +30,11 @@ public class Paquete extends Producto {
 
 	@Override
 	public double calcularPrecioFinal() {
-		// TODO Auto-generated method stub
-		return 0;
+		double precioAcumulado = 0.0;
+		for (Producto producto : productosIntegrados) {
+			precioAcumulado = precioAcumulado + producto.calcularPrecioFinal();
+		}
+		return precioAcumulado;
 	}
 
 }
