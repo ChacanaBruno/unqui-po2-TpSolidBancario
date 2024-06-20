@@ -1,7 +1,7 @@
 package enumsYstreams;
 
 public enum LesionsDermatologic {
-	ROJO("Lesión roja", 1), GRIS("Lesión gris", 2), AMARILLO("Lesión amarilla", 3), MIEL("Lesión miel", 4);
+	RED("Lesión roja", 1), GREY("Lesión gris", 2), YELLOW("Lesión amarilla", 3), HONEY("Lesión miel", 4);
 
 	private final String description;
 	private final int riskLevel;
