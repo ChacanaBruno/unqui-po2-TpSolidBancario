@@ -20,9 +20,9 @@ public class Municipality {
 	}
 	
     public static List<WeeklyActivity> getSoccerActivities(List<WeeklyActivity> activities) {
-        return activities.stream()
-                .filter(activity -> activity.getSport() == Sport.SOCCER)
-                .collect(Collectors.toList());
+        return activities.stream() // convertir en stream
+                .filter(activity -> activity.getSport() == Sport.SOCCER) // filtrado
+                .collect(Collectors.toList()); // crear coleccion lista
     }
     
     public List<WeeklyActivity> getActivitiesOfComplexity(int complexity) {
@@ -31,5 +31,10 @@ public class Municipality {
                 .collect(Collectors.toList());
     }
 
+    public int gethoursOfActivitiesWeekly() {
+        return listOFWeeklyActivity.stream()
+                .mapToInt(WeeklyActivity::getDuration)  // Obtener la duración de cada actividad
+                .sum();                                 // Sumar todas las duraciones
+    }
 	
 }
