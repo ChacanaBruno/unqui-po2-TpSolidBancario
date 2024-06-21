@@ -1,14 +1,16 @@
 package enumsYstreams;
 
 import java.time.LocalTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class WeeklyActivity {
 	private DayOfTheWeek day;
 	private LocalTime startTime;
-	private LocalTime duration;
+	private int duration;
 	private Sport sport;
 
-	public WeeklyActivity(DayOfTheWeek day, LocalTime startTime, LocalTime duration, Sport sport) {
+	public WeeklyActivity(DayOfTheWeek day, LocalTime startTime, int duration, Sport sport) {
 		super();
 		this.day = day;
 		this.startTime = startTime;
@@ -32,11 +34,11 @@ public class WeeklyActivity {
 		this.startTime = startTime;
 	}
 
-	public LocalTime getDuration() {
+	public int getDuration() {
 		return duration;
 	}
 
-	public void setDuration(LocalTime duration) {
+	public void setDuration(int duration) {
 		this.duration = duration;
 	}
 
@@ -47,5 +49,26 @@ public class WeeklyActivity {
 	public void setSport(Sport sport) {
 		this.sport = sport;
 	}
+
+	public int calculateCost() {
+	    int baseCostPerHour = getBaseCostPerHour();
+	    int complexityCost = sport.getComplexity() * 200;
+	    return (baseCostPerHour + complexityCost) * duration;
+	}
+
+	private int getBaseCostPerHour() {
+	    switch (day) {
+	        case THURSDAY:
+	        case FRIDAY:
+	        case SATURDAY:
+	        case SUNDAY:
+	            return 1000;
+	        default:
+	            return 500;
+	    }
+	}
+	
+
+    
 
 }
