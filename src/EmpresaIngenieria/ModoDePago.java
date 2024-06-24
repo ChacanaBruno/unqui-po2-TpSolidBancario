@@ -1,15 +1,11 @@
 package EmpresaIngenieria;
 
-public abstract class ModoDePago {
-	private double ajuste;
+public interface  ModoDePago {
 	
-	ModoDePago(double ajuste) {
-		this.ajuste = ajuste;
-	} 
 	
-	 public abstract double getMonto(Actividad a);
+
+	public double calcularMontoPara(Actividad a);
+	 public  double getMonto(Actividad a);
 	 
-	 public double getAjuste() {
-		 return ajuste;
-	 }
+
 }

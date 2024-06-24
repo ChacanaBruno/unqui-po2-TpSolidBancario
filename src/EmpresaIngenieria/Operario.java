@@ -1,39 +1,26 @@
 package EmpresaIngenieria;
 
 public class Operario {
-	private int horasTrabajadas;
-	private double valorPorHora;
-	private int aniosDeAntiguedad;
+	
+	private Integer horasTrabajadas;
+	private Double valorPorHora;
+	private Integer aniosDeAntiguedad;
+	
 
-	public Operario(int horasTrabajadas, double valorPorHora, int aniosDeAntiguedad) {
+	public Operario(Integer horasTrabajadas, Double valorPorHora, Integer aniosDeAntiguedad) {
 		super();
 		this.horasTrabajadas = horasTrabajadas;
 		this.valorPorHora = valorPorHora;
 		this.aniosDeAntiguedad = aniosDeAntiguedad;
 	}
 
-	public int getHorasTrabajadas() {
-		return horasTrabajadas;
+	public Double getSueldo() {
+		return this.horasTrabajadas * this.valorPorHora * this.procentajeExtraPorAntiguedad();
 	}
 
-	public void setHorasTrabajadas(int horasTrabajadas) {
-		this.horasTrabajadas = horasTrabajadas;
-	}
-
-	public double getValorPorHora() {
-		return valorPorHora;
-	}
-
-	public void setValorPorHora(double valorPorHora) {
-		this.valorPorHora = valorPorHora;
-	}
-
-	public int getAniosDeAntiguedad() {
-		return aniosDeAntiguedad;
-	}
-
-	public void setAniosDeAntiguedad(int aniosDeAntiguedad) {
-		this.aniosDeAntiguedad = aniosDeAntiguedad;
+	private Double procentajeExtraPorAntiguedad() {
+		
+		return (aniosDeAntiguedad > 5) ? 1.1 : 1.0;
 	}
 
 }

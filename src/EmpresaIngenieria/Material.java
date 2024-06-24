@@ -1,10 +1,10 @@
 package EmpresaIngenieria;
 
-public class Materiales {
+public class Material {
 	private int cantidad;
 	private double precio;
 
-	public Materiales(int cantidad, double precio) {
+	public Material(int cantidad, double precio) {
 		super();
 		this.cantidad = cantidad;
 		this.precio = precio;
@@ -19,7 +19,7 @@ public class Materiales {
 	}
 
 	public double getPrecio() {
-		return precio;
+		return precio * cantidad;
 	}
 
 	public void setPrecio(double precio) {
