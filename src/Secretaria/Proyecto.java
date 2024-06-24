@@ -1,16 +1,18 @@
 package Secretaria;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class Proyecto extends Actividad {
 	private int duracion;
 	private List<Empleado> empleados;
 
-	public Proyecto(int duracion, List<Empleado> empleados) {
-		super();
+
+
+	public Proyecto(String nombre, LocalDate fechaInicio, Empleado lider, int duracion, List<Empleado> empleados) {
+		super(nombre, fechaInicio, lider);
 		this.duracion = duracion;
 		this.empleados = empleados;
-
 	}
 
 	@Override

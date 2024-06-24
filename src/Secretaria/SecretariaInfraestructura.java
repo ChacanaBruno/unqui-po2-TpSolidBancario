@@ -11,6 +11,6 @@ public class SecretariaInfraestructura {
 	}
 
 	public double inversionTotal() {
-		
+		return this.actividades.stream().mapToDouble(a -> a.inversionTotal()).sum();
 	} 
 }
