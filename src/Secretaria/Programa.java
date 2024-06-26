@@ -15,6 +15,10 @@ public class Programa extends Actividad {
 		this.fechaInicio = identificarFechaMastemprana();
 	}
 
+	public Programa(List<Actividad> actividades2, double costoFijo2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	private LocalDate identificarFechaMastemprana() {
 		return actividades.stream()
 				.map(Actividad :: getFechaInicio).

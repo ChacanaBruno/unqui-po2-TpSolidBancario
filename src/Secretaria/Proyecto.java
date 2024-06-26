@@ -15,6 +15,12 @@ public class Proyecto extends Actividad {
 		this.empleados = empleados;
 	}
 
+	public Proyecto(LocalDate fechaInicio, List<EmpleadoTest> empleados2) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	@Override
 	public Double inversionTotal() {
 
