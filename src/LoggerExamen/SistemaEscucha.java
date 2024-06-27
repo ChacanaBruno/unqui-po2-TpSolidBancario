@@ -10,6 +10,21 @@ public class SistemaEscucha implements Sistema {
 		this.reglaActual = reglaActual;
 	}
 
+
+	public void notificacion(String msg, Severidad s) {
+		getReglaActual().enviarMensaje(this, msg, s);
+	}
+
+	public void mostrarMensaje(String msg, Severidad s) {
+
+		monitor.printSreen("holaMundo", IMonitor.RED);
+	}
+
+	public void setRegla(Regla regla) {
+		reglaActual = regla;
+	}
+	
+	
 	public Monitor getMonitor() {
 		return monitor;
 	}
@@ -30,18 +45,5 @@ public class SistemaEscucha implements Sistema {
 	public void suscribirseALogger(Logger logger) {
 		logger.add(this);
 
-	}
-
-	public void notificacion(String msg, Severidad s) {
-		getReglaActual().enviarMensaje(this, msg, s);
-	}
-
-	public void mostrarMensaje(String msg, Severidad s) {
-
-		monitor.printSreen("holaMundo", IMonitor.RED);
-	}
-
-	public void setRegla(Regla regla) {
-		reglaActual = regla;
 	}
 }
