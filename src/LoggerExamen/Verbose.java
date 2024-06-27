@@ -10,10 +10,11 @@ public class Verbose implements Regla {
 	public void enviarMensaje(SistemaEscucha s, String msg, Severidad severidad) {
 
 		if (this.getMensajesRecibidos().size() != 100) {
-			s.getMonitor().printSreen(msg, "Gray");
+			s.getMonitor().printSreen(msg, IMonitor.GRAY);
 			this.agregarMensaje(msg);
 
 		} else {
+			s.getMonitor().printSreen(msg, IMonitor.GRAY);
 			this.enviarMail();
 			this.getMensajesRecibidos().clear(); // reinicia el contador
 		}
