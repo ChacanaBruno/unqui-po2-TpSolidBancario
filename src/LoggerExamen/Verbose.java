@@ -6,6 +6,17 @@ public class Verbose implements Regla {
 	private IEmailApp apiEmail;
 	private List<String> mensajesRecibidos;
 
+	public Verbose(IEmailApp apiEmail, List<String> mensajesRecibidos) {
+		super();
+		this.apiEmail = apiEmail;
+		this.mensajesRecibidos = mensajesRecibidos;
+	}
+
+	public Verbose(List<String> mensajesRecibidos) {
+
+		this.mensajesRecibidos = mensajesRecibidos;
+	}
+
 	@Override
 	public void enviarMensaje(SistemaEscucha s, String msg, Severidad severidad) {
 

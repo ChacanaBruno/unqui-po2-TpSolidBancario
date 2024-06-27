@@ -5,6 +5,11 @@ import java.util.List;
 public class Produccion implements Regla {
 	private List<Severidad> nivelesDeSeveridad;
 
+	public Produccion(List<Severidad> nivelesDeSeveridad) {
+		super();
+		this.nivelesDeSeveridad = nivelesDeSeveridad;
+	}
+
 	@Override
 	public void enviarMensaje(SistemaEscucha s, String msg, Severidad severidad) {
 		if (nivelesDeSeveridad.contains(severidad)) {
