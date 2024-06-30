@@ -25,4 +25,5 @@ public class TestPlanAhorro {
 
         assertEquals(2, plan.getCuotas());  // Verificar resultado esperado
     }
+    //
 }
