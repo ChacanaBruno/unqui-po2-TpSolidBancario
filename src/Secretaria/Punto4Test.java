@@ -13,9 +13,7 @@ public class Punto4Test {
 	Programa MasAguaPotable;
 	List<EmpleadoTest> empleados;
 	List<Actividad> actividadesMaxExtraccion;
-
 	List<Actividad> actividadesMasAguaPotable;
-
 	@BeforeEach
 	public void setUp() {
 		LocalDate fechaInicio = LocalDate.of(2023, 6, 25);
@@ -25,8 +23,6 @@ public class Punto4Test {
 		empleados.add(empleado1);
 		
 		double costoFijo = 150.00;
-		
-		
 		
 		ConexionARed = new Proyecto(fechaInicio,empleados);
 		
@@ -43,4 +39,3 @@ public class Punto4Test {
 		MasAguaPotable = new Programa(actividadesMasAguaPotable, costoFijo);
 }
 
-}

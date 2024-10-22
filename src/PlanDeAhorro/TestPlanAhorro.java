@@ -22,7 +22,6 @@ public class TestPlanAhorro {
     @Test
     public void testPagarCuota() {
         plan.pagarCuota();  // Ejecutar acción a probar
-
         assertEquals(2, plan.getCuotas());  // Verificar resultado esperado
     }
     //
