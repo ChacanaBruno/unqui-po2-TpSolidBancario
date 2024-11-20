@@ -4,8 +4,8 @@ import java.sql.Date;
 
 //Segun Patron Adapter: Adaptador (Adapter)
 public class AdaptadorEuropeo implements InstitucionAntifraude {
-
-	private ComiteAntifraudeEuropeo institucionEuropea; 
+	
+	private ComiteAntifraudeEuropeo institucionEuropea; // interfaz incompaible con banco
 	// notar que se usa la interfaz implicitamente en el mensaje de abajo
 	// aparentemene no se hace falta crear un objeto que implicitamente implemente a la interfaz Europea.
 	// tal vez si sea necesario para test! 
@@ -15,9 +15,7 @@ public class AdaptadorEuropeo implements InstitucionAntifraude {
 
 	@Override // adaptamos el mensaje de la interfaz que utliza banco orignal, con el mensaje que usa la interfaz europea. 
 	public void accionarFraude(String numeroTarjeta, Date fecha, String comercio) {
-		institucionEuropea.iniciarInvestigación(numeroTarjeta, fecha); // se ve que no importa el comercio? con tal de que todo funcione.
-																		
-
+		
+		institucionEuropea.iniciarInvestigación(numeroTarjeta, fecha); // se ve que no importa el comercio? con tal de que todo funcione.															
 	}
-
 }

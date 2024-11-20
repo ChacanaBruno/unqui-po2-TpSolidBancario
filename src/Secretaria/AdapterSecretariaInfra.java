@@ -1,11 +1,10 @@
 package Secretaria;
 
 public class AdapterSecretariaInfra implements Secretaria {
-	private SecretariaInfraestructura secretaria;
+	private SecretariaInfraestructura secretariaInfra;
 	@Override
 	public float montoTotal() {
 		
-		return secretaria.inversionTotal();
+		return secretariaInfra.inversionTotal();
 	}
-
 }

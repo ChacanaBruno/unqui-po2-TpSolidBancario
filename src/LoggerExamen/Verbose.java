@@ -20,7 +20,7 @@ public class Verbose implements Regla {
 	@Override
 	public void enviarMensaje(SistemaEscucha s, String msg, Severidad severidad) {
 
-		if (this.getMensajesRecibidos().size() != 100) {
+		if (this.getMensajesRecibidos().size() < 100) {
 			s.getMonitor().printSreen(msg, IMonitor.GRAY);
 			this.agregarMensaje(msg);
 
@@ -41,7 +41,7 @@ public class Verbose implements Regla {
 		}
 
 		// Enviar un único correo electrónico con todos los mensajes concatenados
-		this.apiEmail.sendEmail("Destinatario", "Asunto", contenido.toString());
+		this.apiEmail.sendEmail("AUTORIDAD", "Se llego a los 100 msj", contenido.toString());
 	}
 
 	public List<String> getMensajesRecibidos() {

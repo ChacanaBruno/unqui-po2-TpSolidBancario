@@ -1,6 +1,5 @@
 package TarjetaYBancoExamen;
 
-
 //Segun patron State: Estado Concreto
 public class Inactiva extends EstadoT {
     private MailSender envioDeEmails;
@@ -9,7 +8,8 @@ public class Inactiva extends EstadoT {
         super(tarjeta); // Inicializa la tarjeta en el estado actual
         this.envioDeEmails = envioDeEmails;
     }
-
+    		
+    		
     @Override
     public void activar() {
         tarjeta.setEstadoActual(new Activa(tarjeta)); // Cambia al estado activo

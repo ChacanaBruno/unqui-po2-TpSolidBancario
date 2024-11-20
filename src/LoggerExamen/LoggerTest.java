@@ -27,6 +27,7 @@ class LoggerTest {
 		loggerSUT.enviarMensaje("new mensaje", Severidad.DEBUG);
 		
 		assertEquals(loggerSUT.getSistemaDeEscucha().size(),1);
+		
 		verify(s1, times(1)).notificacion("new mensaje", Severidad.DEBUG);
 	}
 }

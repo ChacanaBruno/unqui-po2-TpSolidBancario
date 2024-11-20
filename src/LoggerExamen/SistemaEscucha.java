@@ -2,6 +2,7 @@ package LoggerExamen;
 
 public class SistemaEscucha implements Sistema {
 	private Monitor monitor;
+	//private IMonitor miMinotor;
 	private Regla reglaActual;
 
 	public SistemaEscucha(Monitor monitor, Regla reglaActual) {
@@ -10,14 +11,9 @@ public class SistemaEscucha implements Sistema {
 		this.reglaActual = reglaActual;
 	}
 
-
+ 
 	public void notificacion(String msg, Severidad s) {
 		getReglaActual().enviarMensaje(this, msg, s);
-	}
-
-	public void mostrarMensaje(String msg, Severidad s) {
-
-		monitor.printSreen("holaMundo", IMonitor.RED);
 	}
 
 	public void setRegla(Regla regla) {
