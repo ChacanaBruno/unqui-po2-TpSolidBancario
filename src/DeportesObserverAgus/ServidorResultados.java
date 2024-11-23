@@ -3,7 +3,7 @@ package DeportesObserverAgus;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServidorResultados {
+public class ServidorResultados { // Sujeto
 	private List<Suscripcion> suscripciones = new ArrayList<>();
 
 	public void agregarSuscripcion(Suscripcion suscripcion) {
@@ -16,9 +16,8 @@ public class ServidorResultados {
 
 	public void agregarPartido(Partido partido) { // notificar
 		for (Suscripcion suscripcion : suscripciones) {
-			if (suscripcion.coincideCon(partido)) {
-				suscripcion.notificar(partido);
-			}
+
+			suscripcion.notificar(partido);
 		}
 	}
 }
