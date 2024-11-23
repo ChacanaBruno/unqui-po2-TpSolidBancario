@@ -9,9 +9,11 @@ public class Cultivo implements Porcion {
 		this.nombre = nombre;
 		this.precio = precio;
 	}
+	
 
 	@Override
 	public double ganancia() {
+		
 		return precio;
 	}
 

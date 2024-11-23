@@ -18,4 +18,5 @@ public class PorcionMixta implements Porcion {
 	public void remove(Porcion p) {
 		porciones.remove(p);
 	}
+	
 }

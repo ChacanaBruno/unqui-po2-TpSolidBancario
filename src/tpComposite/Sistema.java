@@ -8,4 +8,5 @@ public class Sistema {
 	public double calcularMontoDePorciones() {
 		return porciones.stream().mapToDouble(Porcion::ganancia).sum();
 	}
+	
 }
